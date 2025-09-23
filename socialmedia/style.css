@@ -1,0 +1,209 @@
+/* reset (minimaal) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font: 1.6rem/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: #fafafa;
+    color: #111;
+}
+
+/* topbar */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.topicons {
+    display: flex;
+    gap: 10px;
+}
+
+.topicons button {
+    background: none;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* feed container */
+.feed {
+    max-width: 600px;
+    margin: 16px auto 40px;
+}
+
+/* post */
+.post {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.post+.post {
+    margin-top: 16px;
+}
+
+/* post header */
+.post-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.who {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.who .meta {
+    color: #777;
+    font-size: 1.3rem;
+}
+
+.more {
+    margin-left: auto;
+    background: none;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* media */
+.post-media img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* actions */
+.post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 8px 0;
+}
+
+.post-actions .left {
+    display: flex;
+    gap: 8px;
+}
+
+.post-actions button {
+    background: none;
+    border: 0;
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+.save {
+    font-size: 2.2rem;
+}
+
+/* body */
+.post-body {
+    padding: 8px 12px 12px;
+    display: grid;
+    gap: 6px;
+}
+
+.likes {
+    font-weight: 600;
+}
+
+.caption strong {
+    font-weight: 600;
+}
+
+.view-comments {
+    background: none;
+    border: 0;
+    color: #737373;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.date {
+    color: #9f9f9f;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+
+
+/* generic button reset */
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+/* hover + active states */
+button:hover {
+  background: #f0f0f0;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+/* topbar buttons */
+.topicons button {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 4px 8px;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* post action buttons */
+.post-actions button {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 4px 8px;
+  min-width: 36px;
+  text-align: center;
+}
+
+/* special look for save button (right side) */
+.save {
+  border-color: #bbb;
+}
