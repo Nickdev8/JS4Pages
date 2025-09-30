@@ -1,33 +1,27 @@
-// DATA (placeholder)
 const posts = [
     {
         user: "bobDylan",
         avatar: "https://picsum.photos/seed/user/64",
         image: "https://picsum.photos/seed/beach/1080/1080",
         likes: 196,
-        caption:
-            "Beutiful New-York sunrise",
+        caption: "Beutiful New-York sunrise",
         commentsCount: 23,
         timeAgo: "2 u",
         dateLabel: "11 sep 2001",
     },
 ];
 
-// ROOT
 const feed = document.getElementById("feed");
 
-// OOP component
 class IGPost {
     constructor(data) {
         this.data = data;
     }
 
     render() {
-        // <article class="post">
         const article = document.createElement("article");
         article.className = "post";
 
-        // ----- header -----
         const head = document.createElement("div");
         head.className = "post-head";
 
@@ -58,7 +52,6 @@ class IGPost {
         head.appendChild(who);
         head.appendChild(more);
 
-        // ----- media -----
         const media = document.createElement("div");
         media.className = "post-media";
 
@@ -68,35 +61,31 @@ class IGPost {
 
         media.appendChild(img);
 
-        // ----- actions -----
         const actions = document.createElement("div");
         actions.className = "post-actions";
 
         const left = document.createElement("div");
         left.className = "left";
 
-        // ❤️ Like button
         const btnLike = document.createElement("button");
         btnLike.setAttribute("aria-label", "Like");
         btnLike.textContent = "<3";
         let liked = false;
         btnLike.addEventListener("click", () => {
-        liked = !liked;
-        btnLike.style.fontWeight = liked ? "bold" : "normal";
+            liked = !liked;
+            btnLike.style.fontWeight = liked ? "bold" : "normal";
         });
 
-        // 🗂 Save button
         const btnSave = document.createElement("button");
         btnSave.className = "save";
         btnSave.setAttribute("aria-label", "Opslaan");
         btnSave.textContent = "[ ]";
         let saved = false;
         btnSave.addEventListener("click", () => {
-        saved = !saved;
-        btnSave.textContent = saved ? "[X]" : "[ ]";
+            saved = !saved;
+            btnSave.textContent = saved ? "[X]" : "[ ]";
         });
 
-        // other buttons (no extra UI)
         const btnComment = document.createElement("button");
         btnComment.setAttribute("aria-label", "Reageren");
         btnComment.textContent = "(・∀・)";
@@ -112,7 +101,6 @@ class IGPost {
         actions.appendChild(left);
         actions.appendChild(btnSave);
 
-        // ----- body -----
         const body = document.createElement("div");
         body.className = "post-body";
 
@@ -137,7 +125,6 @@ class IGPost {
         body.appendChild(viewComments);
         body.appendChild(date);
 
-        // ----- mount -----
         article.appendChild(head);
         article.appendChild(media);
         article.appendChild(actions);
@@ -147,6 +134,5 @@ class IGPost {
     }
 }
 
-// render alle posts
 feed.innerHTML = "";
-posts.forEach((p) => feed.appendChild(new IGPost(p).render()));
+posts.forEach(p => feed.appendChild(new IGPost(p).render()));
