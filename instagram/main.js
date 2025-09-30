@@ -3,11 +3,11 @@ const posts = [
     user: "bobDylan",
     avatar: "https://picsum.photos/seed/user/64",
     image: "https://picsum.photos/seed/beach/1080/1080",
-    likes: 196,
+    likes: 5196,
     caption: "Beutiful New-York sunrise",
     commentsCount: 23,
     timeAgo: "2 u",
-    dateLabel: "11 sep 2001",
+    dateLabel: "11 sep 2001. 05:34",
   },
 ];
 
